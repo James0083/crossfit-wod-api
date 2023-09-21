@@ -39,6 +39,45 @@ const {saveToDatabase} = require("./utils");
  *                      type: string
  *                  example: ["Split the 21 thrusters as needed", "Try to do the 9 and 6 thrusters unbroken", "RX Weights: 115lb/75lb"]
  */
+
+/**
+ * @openapi
+ *  components:
+ *      schemas:
+ *          Workout-2:
+ *              type: object
+ *              properties:
+ *                  id:
+ *                      type: string
+ *                      example: 4a3d9aaa-608c-49a7-a004-66305ad4ab50
+ *                  name:
+ *                      type: string
+ *                      example: Dead Push-Ups
+ *                  mode:
+ *                      type: string
+ *                      example: AMRAP 10
+ *                  equipment:
+ *                      type: array
+ *                      items: 
+ *                          type: string
+ *                      example: ["barbell"]
+ *                  exercises:
+ *                      type: array
+ *                      items: 
+ *                          type: string
+ *                      example: ["15 deadlifts", "15 hand-release push-ups"]
+ *                  createdAt:
+ *                      type: string
+ *                      example: 1/25/2022, 1:15:44 PM
+ *                  updatedAt:
+ *                      type: string
+ *                      example: 1/25/2022, 1:15:44 PM
+ *                  trainerTips:
+ *                      type: array
+ *                      items:
+ *                          type: string
+ *                      example: ["Deadlifts are meant to be light and fast", "Try to aim for unbroken sets", "RX Weights: 135lb/95lb"]
+ */
 const getAllWorkouts = (filterParams) => {
     try {
         let workouts = DB.workouts;
